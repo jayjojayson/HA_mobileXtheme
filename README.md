@@ -17,9 +17,9 @@ Auf Startseite habe ich zwei Menüs für den Header hinterlegt. Wählt das gewü
 
 - #### 📣 Topmenü verstecken über Button (optional)
 - #### ⭐ Hauptseiten für alle Räume (Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten und Einstellungen)
-- #### ⭐ Unterseiten für Einstellungen, Verbraucher, Solar, 📈 History, Batterie und Luftreiniger
-- #### ⚡ Unterseite Einstellungen mit Button um Topheader von HomeAssistant auszublenden
-- #### ⚡ Unterseite Einstellungen mit Verknüpfungen zu euren Geräten, Automatisierungen, Bereichen und Entwickler-Tools
+- #### ⚡ Unterseiten für Einstellungen, Verbraucher, Solar, 📈 History, Batterie und Luftreiniger
+- #### ⭐ Unterseite Einstellungen mit Button um Topheader von HomeAssistant auszublenden
+- #### ⭐ Unterseite Einstellungen mit Verknüpfungen zu euren Geräten, Automatisierungen, Bereichen und Entwickler-Tools
 - #### 📱 Startseite anpassbar (bereits einige Beispiele für Grundaufbau hinterlegt)
 - #### :house: Raumanpassung einfach möglich (Erklärung dazu, weiter unten)
 
