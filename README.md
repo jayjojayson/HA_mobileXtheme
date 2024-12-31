@@ -1,5 +1,5 @@
 # 📱 HA_mobileXtheme 📱
-This is mobileXtheme for HomeAssistant works with (auto-entities)
+Das ist mobileXtheme für HomeAssistant arbeitet mit (auto-entities)
 
 Hier möchte ich euch mein mobile Dashboard vorstellen. Das Dashboard basiert auf der auto-entities-card und ermöglicht es ein ausgefülltes Dashboard ohnes weiteres Zutun zu erhalten.
 Die Startseite kann nach belieben gestaltet werden. Alle anderen Raum- und Unterseiten werden automatisch mit euren Smarthomegeräten gefüllt. Probiert es aus. 😊
@@ -8,7 +8,7 @@ Die Startseite kann nach belieben gestaltet werden. Alle anderen Raum- und Unter
 ## 📂 Seitenaufbau
 Im unteren Menü sind alle Räume aufgeführt. Aktuell sind das Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten und Einstellungen. Es wird also ein 3-Raumwohnung mit Garten dargestellt.
 Die Räume können aber auch einfach ediert werden. Wie das geht findet ihr weiter unten in den Erklärungen. Im oberen Menü findet ihr die Unterseiten Verbraucher, Solar, History, Batterie und Luftreiniger.
-Auf Startseite habe ich zwei Menüs für den Header hinterlegt. Wählt das gewünschte aus und löscht das andere. Es werden nicht alle Luftreiniger haben, daher ist das zweite Menü an dieser Stelle mit den Einstellungen verknüpft.
+Auf Startseite habe ich zwei Menüs für den Header hinterlegt. Wählt das gewünschte aus und löscht das andere. Es werden nicht alle einen Luftreiniger nutzen, daher ist das zweite Menü an dieser Stelle mit den Einstellungen verknüpft.
 
 ## 📖 Features
 
