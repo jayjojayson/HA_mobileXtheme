@@ -74,6 +74,3 @@ kiosk_mode:
 
 #### ` Note: Danke an die Entwickler der Cards aus meinen Voraussetzungen.`
 #### ` Dadurch wird das Dahsboard zu dem, was es ist. 🤗` 
-<div align="right">
-  <img src="https://profile-counter.glitch.me/jayjojayson/count.svg?"  />
-</div>
