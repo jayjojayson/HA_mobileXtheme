@@ -480,6 +480,36 @@ sections:
               color: var(--primary-text-color) !important;
               size: 20px;
             }
+      - type: custom:auto-entities
+        card:
+          show_name: true
+          show_icon: true
+          show_state: false
+          type: glance
+          card_mod:
+            style:
+              $: |
+                .card-header, :host ::slotted(.card-header) {
+                  font-size: 1.5em !important;
+                  font-weight: 150 !important;
+                  color: var(--primary-color) !important;
+                }               
+                :host(.type-glance) {        
+                  background: rgb(22,22,22,0.3) !important;            
+                  border: 1px solid var(secondary-color) !important;              
+                  border-radius: 8px !important; 
+                  outline: none !important;
+                }
+          columns: null
+        filter:
+          include:
+            - entity_id: light.*
+              state: "on"
+            - entity_id: lights.*
+              state: "on"
+          exclude:
+            - entity_id: light.cyd*
+        show_empty: false
       - type: custom:bubble-card
         styles: |
           .bubble-icon {
@@ -571,14 +601,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -588,12 +610,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -615,6 +631,11 @@ sections:
                       area: Wohnzimmer
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -673,6 +694,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -725,6 +751,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -771,6 +802,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -850,14 +886,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -867,12 +895,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -894,6 +916,11 @@ sections:
                       area: Küche
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -952,6 +979,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1004,6 +1036,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1050,6 +1087,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1129,14 +1171,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -1146,12 +1180,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -1173,6 +1201,11 @@ sections:
                       area: Bad
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1231,6 +1264,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1283,6 +1321,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1329,6 +1372,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1408,14 +1456,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -1425,12 +1465,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -1454,6 +1488,11 @@ sections:
                     - entity_id: light.cyd*
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1512,6 +1551,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1564,6 +1608,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1610,6 +1659,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1689,14 +1743,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -1706,12 +1752,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -1733,6 +1773,11 @@ sections:
                       area: Esszimmer
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1791,6 +1836,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1843,6 +1893,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1889,6 +1944,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -1968,14 +2028,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -1985,12 +2037,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -2012,6 +2058,11 @@ sections:
                       area: Flur
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2070,6 +2121,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2122,6 +2178,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2168,6 +2229,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2247,14 +2313,6 @@ sections:
                       color: var(--primary-color);
                     }
               - type: custom:auto-entities
-                card_mod:
-                  style: |
-                    ha-card {
-                      background: none !important;
-                      box-shadow: none !important;
-                      border: none !important;
-                      margin-top: -30px;
-                    }
                 card:
                   show_name: true
                   show_icon: true
@@ -2264,12 +2322,6 @@ sections:
                   card_mod:
                     style:
                       $: |
-                        ha-card {
-                          background: transparent !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          border-radius: 0px !important;
-                        }
                         .card-header, :host ::slotted(.card-header) {
                           font-size: 1.5em !important;
                           font-weight: 150 !important;
@@ -2293,6 +2345,11 @@ sections:
                     - entity_id: light.*kamera*
                 show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2351,6 +2408,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2403,6 +2465,11 @@ sections:
                       method: "-name"
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2449,6 +2516,11 @@ sections:
                       method: name
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
@@ -2528,17 +2600,15 @@ sections:
                       color: var(--primary-color);
                     }
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -10px; 
-                        }
+                    card_mod: null
                     card:
                       type: entities
                       title: Gesamtverbauch
@@ -2574,17 +2644,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -30px; 
-                        }
                     card:
                       type: entities
                       title: Wohnzimmer
@@ -2622,17 +2689,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -40px; 
-                        }
                     card:
                       type: entities
                       title: Küche
@@ -2670,17 +2734,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -40px; 
-                        }
                     card:
                       type: entities
                       title: Bad
@@ -2718,17 +2779,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -40px; 
-                        }
                     card:
                       type: entities
                       title: Schlafzimmer
@@ -2766,17 +2824,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -20px; 
-                        }
                     card:
                       type: entities
                       title: Esszimmer
@@ -2808,6 +2863,96 @@ sections:
                         - entity_id: sensor.*leistung*
                           state: "> 0"
                           area: Esszimmer
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Flur
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Garten
                       exclude:
                         - entity_id: sensor.*total*
                     sort:
@@ -3104,16 +3249,14 @@ sections:
                       color: var(--primary-color);
                     }
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                        }
                     card:
                       type: entities
                       title: Wohnzimmer
@@ -3152,17 +3295,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Küche
@@ -3201,17 +3341,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Bad
@@ -3250,17 +3387,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Schlafzimmer
@@ -3299,17 +3433,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Esszimmer
@@ -3344,6 +3475,98 @@ sections:
                         - entity_id: sensor.*battery*
                           state: < 35
                           area: Esszimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Flur
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Flur
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Garten
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Garten
                     sort:
                       method: area
                     show_empty: false
@@ -3389,16 +3612,14 @@ sections:
                       color: var(--primary-color);
                     }
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                        }
                     card:
                       type: entities
                       title: Wohnzimmer
@@ -3433,17 +3654,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Küche
@@ -3478,17 +3696,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Bad
@@ -3523,17 +3738,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Schlafzimmer
@@ -3568,17 +3780,14 @@ sections:
                       method: area
                     show_empty: false
               - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
                 state_color: true
                 entities:
                   - type: custom:auto-entities
-                    card_mod:
-                      style: |
-                        ha-card {
-                          background: none !important;
-                          box-shadow: none !important;
-                          border: none !important;
-                          margin-top: -50px; 
-                        }
                     card:
                       type: entities
                       title: Esszimmer
@@ -3609,6 +3818,88 @@ sections:
                       include:
                         - entity_id: fan.*
                           area: Esszimmer
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Flur
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Garten
                       method: area
                     show_empty: false
       - type: vertical-stack
