@@ -1,0 +1,6 @@
+{
+  "name": "ha_mobileXtheme",
+  "codeowners": ["@jayjojayson"],
+  "version": "1.0.0",
+  "iot_class": "plugin"
+}
