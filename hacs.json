@@ -1,7 +1,6 @@
 {
   "name": "HA mobileXtheme", 
   "content_in_root": false,
-  "zipped_release": true;
   "filename": "HA_mobileXtheme.yaml",
-  "country": ["NO", "DE"]
+  "country": ["DE"]
 }
