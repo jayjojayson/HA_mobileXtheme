@@ -1,0 +1,8 @@
+{
+  "domain": "ha_mobileXtheme",
+  "name": "HA mobileXtheme",
+  "codeowners": ["@jayjojayson"],
+  "config_flow": true,
+  "version": "1.0.0",
+  "iot_class": "cloud_polling"
+}
