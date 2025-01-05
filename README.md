@@ -4,11 +4,11 @@ Das ist mobileXtheme für HomeAssistant arbeitet mit Autofill (auto-entities)
 Hier möchte ich euch mein mobile Dashboard mit Autofill vorstellen. Das Dashboard basiert auf der auto-entities-card und ermöglicht es ein ausgefülltes Dashboard ohnes weiteres Zutun zu erhalten.
 Die Startseite kann nach belieben gestaltet werden. Alle anderen Raum- und Unterseiten werden automatisch mit euren Smarthomegeräten gefüllt. Probiert es gerne aus. 😊
 
-## :interrobang: Wie funktioniert das
+## ⁉️ Wie funktioniert das
 Wenn euer Smarhome in Bereiche und darin enthaltene Geräte aufgeteilt ist, was eigentlich jeder machen sollte, dann könnt ihr das Dahsboard nutzen. Wichtig ist Aufteilung in Bereiche und diese sollten wie folgt lauten:
 Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten. Habt ihr andere Bereiche schaut euch den Abschnitt Raum editieren an. Habt ihr nicht die gleichen Raumnamen, müssten diese unter Bereiche in Home Assistant angepasst werden.
 
-## :memo: Seitenaufbau
+## 📝 Seitenaufbau
 Die Startseite enthält oben und unten ein festes Menü. Im unteren Menü sind alle Räume aufgeführt. Aktuell sind das Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten und Einstellungen. Es wird also eine 3-Raumwohnung mit Garten dargestellt.
 Die Räume können aber auch einfach ediert werden. Wie das geht findet ihr weiter unten in den Erklärungen. Im oberen Menü findet ihr die Unterseiten Verbraucher, Solar, History, Batterie und Luftreiniger.
 Auf Startseite habe ich zwei Menüs für den Header hinterlegt. Wählt das gewünschte aus und löscht das andere. Es werden nicht alle einen Luftreiniger nutzen, daher ist das zweite Menü an dieser Stelle mit den Einstellungen verknüpft. Wichtig das Menü muss immer an erster Stelle stehen.
