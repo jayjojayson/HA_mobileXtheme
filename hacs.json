@@ -1,7 +1,7 @@
 {
   "name": "HA mobileXtheme", 
-  "render_readme": true,
-  "domains": ["Integration"],
-  "homeassistant": "2024.12.0", 
-  "iot_class": "cloud_polling"
+  "content_in_root": false,
+  "zipped_release": true;
+  "filename": "HA_mobileXtheme.yaml",
+  "country": ["NO", "DE"]
 }
