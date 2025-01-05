@@ -1,6 +1,6 @@
 {
   "name": "HA_mobileXtheme",
-  "content_in_root": false,
+  "content_in_root": true,
   "filename": "ha_mobileXtheme.yaml",
   "render_readme": true,
   "domains": ["lovelace"],

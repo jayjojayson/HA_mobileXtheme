@@ -1,0 +1,4061 @@
+title: Home
+sections:
+  - type: grid
+    cards:
+      - type: custom:stack-in-card
+        card_mod:
+          style: |
+            ha-card {
+              background: #191f29 !important;
+              border-left: none !important;
+              border-right: none !important;
+              border-top: none !important;
+              border-bottom: 2px solid var(secondary-text-color) !important;
+              border-radius: 0px !important;
+              margin-top: -10px;
+              margin-right: -10px;
+              margin-left: -10px;
+              height: 45px;
+              padding-top: 5px;
+            }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:resistor
+                icon_height: 55%
+                state_color: true
+                tap_action:
+                  action: navigate
+                  navigation_path: "#Strom"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                    }
+              - type: button
+                icon: mdi:solar-power-variant
+                icon_height: 55%
+                state_color: true
+                tap_action:
+                  action: navigate
+                  navigation_path: "#Solar"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                    }
+              - type: button
+                icon: mdi:history
+                icon_height: 55%
+                state_color: true
+                tap_action:
+                  action: navigate
+                  navigation_path: "#History"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                    }
+              - type: button
+                icon: mdi:battery-30
+                icon_height: 55%
+                state_color: true
+                tap_action:
+                  action: navigate
+                  navigation_path: "#Batterie"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                    }
+              - type: button
+                icon: mdi:fan
+                icon_height: 55%
+                state_color: true
+                tap_action:
+                  action: navigate
+                  navigation_path: "#Lufter"
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                    }  
+      - type: custom:stack-in-card
+        card_mod:
+          style: |
+            ha-card {
+              background: rgb(22,22,22,0.3) !important;
+              box-shadow: none !important;
+              border: 1px solid var(secondary-color) !important;              
+              border-radius: 8px !important;
+              padding: 0px; 
+              height: 56px !important;
+            }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: picture-entity
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none grey !important;              
+                      border-radius: 8px 0 0 8px !important;
+                      padding: 0px; 
+                    }
+                show_state: false
+                show_name: false
+                camera_view: auto
+                aspect_ratio: 60%
+                entity: camera.hofkamera_fliessend
+                image: /www/test.png
+                camera_image: camera.hofkamera_fliessend
+              - type: custom:digital-clock
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                      font-size: 9px;
+                    }
+              - type: picture-entity
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;      
+                      border-radius: 0 8px 8px 0 !important;
+                      padding: 0px; 
+                    }
+                show_state: false
+                show_name: false
+                camera_view: auto
+                aspect_ratio: 55%
+                entity: camera.poolkamera_fliessend
+                image: /www/test.png
+                camera_image: camera.poolkamera_fliessend
+      - type: markdown
+        content: |
+          <div style="height: 1px;"></div>
+        card_mod:
+          style: |
+            ha-card {
+              height: 5px !important;
+              background: none !important;
+              box-shadow: none !important;
+              border: none !important;
+              border-radius: 0px !important;
+            }  
+      - type: custom:auto-entities
+        card:
+          show_name: false
+          show_icon: true
+          show_state: false
+          type: glance
+          card_mod:
+            style: |
+              ha-card {
+                background: none !important;
+                box-shadow: none !important;
+                border-radius: 0px !important;
+                border: none !important;
+                color: var(--primary-color);
+                margin-top: -30px;
+                margin-bottom: -30px;
+                margin-left: 60px !important;
+                margin-right: 60px !important;
+              }
+          columns: null
+        filter:
+          include:
+            - entity_id: binary_sensor.bewegung*
+              state: "on"
+        show_empty: false
+        card_mod:
+          style: |
+            ha-card {
+              background: none !important;
+              box-shadow: none !important;
+              border: none !important;
+              padding-top: 0px !important;
+              padding-bottom: 0px !important;
+            }
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: fan.starkvind_luftreiniger_ventilator
+            state_color: true
+            fill_container: false
+            primary_info: none
+            secondary_info: none
+            icon: mdi:fan
+            icon_type: entity-picture
+            icon_color: primary
+            tap_action:
+              action: toggle
+            card_mod:
+              style: |
+                mushroom-shape-icon {
+                  --shape-color-disabled: transparent !important;
+                  --shape-color: transparent !important;
+                  --icon-size: 45px !important;
+                  background: none !important;
+                  box-shadow: none !important;
+                }
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  border-radius: 0px !important;
+                  height: 2px !important;
+                }
+        grid_options:
+          columns: 2
+      - type: markdown
+        content: |
+          <div style="height: 1px;"></div>
+        card_mod:
+          style: |
+            ha-card {
+              height: 2px !important;
+              background: none !important;
+              box-shadow: none !important;
+              border: none !important;
+              border-bottom: 2px dotted var(--secondary-text-color) !important;
+              border-radius: 0px !important;
+              margin-left: 0px;
+              margin-right: 0px;
+            }  
+        grid_options:
+          columns: 8
+      - type: horizontal-stack
+        cards:
+          - type: custom:mushroom-entity-card
+            entity: person.jayjojayson
+            fill_container: false
+            state_color: true
+            primary_info: none
+            secondary_info: none
+            icon: mdi:menu
+            icon_type: entity-picture
+            icon_color: primary
+            tap_action:
+              action: perform-action
+              perform_action: input_boolean.toggle
+              target:
+                entity_id: input_boolean.kioskmode
+            card_mod:
+              style: |
+                mushroom-shape-icon {
+                  --shape-color-disabled: transparent !important;
+                  --shape-color: transparent !important;
+                  --icon-size: 45px !important;
+                  --icon-color: var(--secondary-text-color) !important;
+                  --icon-color-disabled: var(--secondary-text-color) !important;
+                  background: none !important;
+                  box-shadow: none !important;
+                }
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  border-radius: 0px !important;
+                  height: 2px !important;
+                }
+        grid_options:
+          columns: 2
+      - type: custom:auto-entities
+        card:
+          show_name: false
+          show_icon: true
+          show_state: false
+          type: glance
+          card_mod:
+            style: |
+              ha-card {
+                background: none !important;
+                box-shadow: none !important;
+                border-radius: 0px !important;
+                border: none !important;
+                color: var(--primary-color);
+                margin-top: -30px;
+                margin-bottom: -30px;
+                margin-left: 60px !important;
+                margin-right: 60px !important;
+              }
+          columns: null
+        filter:
+          include:
+            - entity_id: binary_sensor.fenster_*
+              state: "on"
+        show_empty: false
+        card_mod:
+          style: |
+            ha-card {
+              background: none !important;
+              box-shadow: none !important;
+              border: none !important;
+              padding-top: 0px !important;
+              padding-bottom: 0px !important;
+            }
+      - type: markdown
+        content: |
+          <div style="height: 1px;"></div>
+        card_mod:
+          style: |
+            ha-card {
+              height: 5px !important;
+              background: none !important;
+              box-shadow: none !important;
+              border: none !important;
+              border-radius: 0px !important;
+            }  
+      - type: custom:stack-in-card
+        card_mod:
+          style: |
+            ha-card {
+              background: rgb(22,22,22,0.3) !important;
+              box-shadow: none !important;
+              border: 1px solid var(secondary-color) !important;              
+              border-radius: 8px !important;
+              padding: 0px; 
+              height: 70px !important;
+            }
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: entity
+                state_color: true
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-color: transparent !important;
+                      color: var(--primary-color) !important;
+                      border-top: none !important;
+                      border-bottom: none !important;
+                      border-left: none !important;
+                      border-right: 1px solid var(secondary-color) !important;              
+                      border-radius: 0px !important;
+                      margin-top: -10px; 
+                    }
+                    .value {
+                      font-size: 10px !important;
+                    }
+                entity: person.jayjojayson
+                icon: m3of:person-4
+                content_info: name
+                name: Jan
+              - type: entity
+                state_color: true
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-color: transparent !important;
+                      color: var(--primary-color) !important;
+                      border-top: none !important;
+                      border-bottom: none !important;
+                      border-left: none !important;
+                      border-right: 1px solid var(secondary-color) !important;              
+                      border-radius: 0px !important;
+                      margin-top: -10px; 
+                    }
+                    .value {
+                      font-size: 10px !important;
+                    }
+                entity: person.mutti
+                icon: m3of:person-3
+                content_info: name
+                name: Mutti
+              - type: entity
+                state_color: true
+                card_mod:
+                  style: |
+                    ha-card {
+                      background-color: transparent !important;
+                      color: var(--primary-color) !important;
+                      border: none !important;
+                      border-right: 0px solid grey !important;
+                      border-radius: 0px !important;
+                      margin-top: -10px; 
+                    }
+                    .value {
+                      font-size: 10px !important;
+                    }
+                entity: lock.hauseingang
+                icon: mdi:lock-open
+                content_info: name
+                name: Haustür
+      - show_current: true
+        show_forecast: true
+        secondary_info_attribute: humidity
+        name: ""
+        type: weather-forecast
+        entity: weather.forecast_home
+        forecast_type: daily
+        card_mod:
+          style: |
+            ha-card {          
+              background: rgb(22,22,22,0.3) !important;            
+              border: 1px solid var(secondary-color) !important;              
+              border-radius: 8px !important;  
+              font-size: 12px;
+              --weather-icon-cloud-front-color: white;
+              --weather-icon-cloud-back-color: lightblue;
+              --weather-icon-sun-color: orange;
+              --weather-icon-rain-color: purple;
+              height: 195px !important;
+              margin-bottom: 0px !important; 
+            }
+            .temp {  
+              color: var(--primary-color) !important; 
+            }
+            .templow {  
+              font-size: 10px !important;
+              margin-left: 12px; 
+              margin-top: -118px;  
+              position: absolute;
+              align-self: flex-end !important; 
+            }
+            .state {  
+              font-size: 20px !important;
+              padding-top: 17px !important;
+            }
+      - type: entities
+        entities:
+          - entity: sensor.total_power
+            name: Netzbezug
+        footer:
+          type: graph
+          entity: sensor.total_power
+          detail: 2
+        state_color: true
+        show_header_toggle: false
+        card_mod:
+          style: |
+            ha-card {          
+              background: rgb(22,22,22,0.3) !important;            
+              border: 1px solid var(secondary-color) !important;              
+              border-radius: 8px !important;  
+              font-size: 12px;
+              height: 145px !important;
+              margin-top: -50px;      
+              color: var(--primary-color) !important;
+            }
+            ha-card ha-icon{
+              color: var(--primary-text-color) !important;
+              size: 20px;
+            }
+      - type: custom:auto-entities
+        card:
+          show_name: true
+          show_icon: true
+          show_state: false
+          type: glance
+          card_mod:
+            style:
+              $: |
+                .card-header, :host ::slotted(.card-header) {
+                  font-size: 1.5em !important;
+                  font-weight: 150 !important;
+                  color: var(--primary-color) !important;
+                }               
+                :host(.type-glance) {        
+                  background: rgb(22,22,22,0.3) !important;            
+                  border: 1px solid var(secondary-color) !important;              
+                  border-radius: 8px !important; 
+                  outline: none !important;
+                }
+          columns: null
+        filter:
+          include:
+            - entity_id: light.*
+              state: "on"
+            - entity_id: lights.*
+              state: "on"
+          exclude:
+            - entity_id: light.cyd*
+        show_empty: false
+      - type: custom:bubble-card
+        styles: |
+          .bubble-icon {
+            --mdc-icon-size: 25px !important;
+          } 
+          * { 
+            font-size: 10px !important;
+            border: none !important;
+            border-radius: 0px !important;
+            background: rgba(12,120,50,0) !important;
+          }
+        card_type: horizontal-buttons-stack
+        auto_order: false
+        1_name: ""
+        1_icon: mdi:sofa
+        1_link: "#Wohnzimmer"
+        2_name: ""
+        2_icon: mdi:fridge
+        2_link: "#Kuche"
+        3_name: ""
+        3_icon: mdi:toilet
+        3_link: "#Bad"
+        4_name: ""
+        4_icon: mdi:bed
+        4_link: "#Schlafzimmer"
+        5_name: ""
+        5_icon: mdi:silverware-fork-knife
+        5_link: "#Esszimmer"
+        6_name: ""
+        6_icon: mdi:shoe-print
+        6_link: "#Flur"
+        7_name: ""
+        7_icon: mdi:sprout
+        7_link: "#Garten"
+        8_name: ""
+        8_icon: mdi:cog
+        8_link: "#Einstellungen"
+        highlight_current_view: true
+        hide_gradient: false
+        margin: 2px
+        card_mod:
+          style: |
+            ha-card {
+              padding: 0px; 
+              z-index: 2;
+              postion: fixed;
+              bottom: 0;
+              margin: 0 !important;
+            }
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Wohnzimmer"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:sofa"></ha-icon>
+                    Wohnzimmer
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Wohnzimmer
+                    - entity_id: lights.*
+                      area: Wohnzimmer
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Wohnzimmer
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Wohnzimmer
+                        - entity_id: switch.*light*
+                          area: Wohnzimmer
+                        - entity_id: switch.dreame*
+                          area: Wohnzimmer
+                        - entity_id: switch.*echo*
+                          area: Wohnzimmer
+                        - entity_id: switch.*internet*
+                          area: Wohnzimmer
+                        - entity_id: switch.*kinder*
+                          area: Wohnzimmer
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Wohnzimmer
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Wohnzimmer
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Wohnzimmer
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Wohnzimmer
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Wohnzimmer
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Wohnzimmer
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Kuche"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:fridge"></ha-icon>
+                    Küche
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Küche
+                    - entity_id: lights.*
+                      area: Küche
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Küche
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Küche
+                        - entity_id: switch.*light*
+                          area: Küche
+                        - entity_id: switch.dreame*
+                          area: Küche
+                        - entity_id: switch.*echo*
+                          area: Küche
+                        - entity_id: switch.*internet*
+                          area: Küche
+                        - entity_id: switch.*kinder*
+                          area: Küche
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Küche
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Küche
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Küche
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Küche
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Küche
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Küche
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Bad"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:toilet"></ha-icon>
+                    Bad
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Bad
+                    - entity_id: lights.*
+                      area: Bad
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Bad
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Bad
+                        - entity_id: switch.*light*
+                          area: Bad
+                        - entity_id: switch.dreame*
+                          area: Bad
+                        - entity_id: switch.*echo*
+                          area: Bad
+                        - entity_id: switch.*internet*
+                          area: Bad
+                        - entity_id: switch.*kinder*
+                          area: Bad
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Bad
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Bad
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Bad
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Bad
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Bad
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Bad
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Schlafzimmer"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:bed"></ha-icon>
+                    Schlafzimmer
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Schlafzimmer
+                    - entity_id: lights.*
+                      area: Schlafzimmer
+                  exclude:
+                    - entity_id: light.cyd*
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                    
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Schlafzimmer
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Schlafzimmer
+                        - entity_id: switch.*light*
+                          area: Schlafzimmer
+                        - entity_id: switch.dreame*
+                          area: Schlafzimmer
+                        - entity_id: switch.*echo*
+                          area: Schlafzimmer
+                        - entity_id: switch.*internet*
+                          area: Schlafzimmer
+                        - entity_id: switch.*kinder*
+                          area: Schlafzimmer
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Schlafzimmer
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Schlafzimmer
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Schlafzimmer
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Schlafzimmer
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Schlafzimmer
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Schlafzimmer
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Esszimmer"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:silverware-fork-knife"></ha-icon>
+                    Esszimmer
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Esszimmer
+                    - entity_id: lights.*
+                      area: Esszimmer
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Esszimmer
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Esszimmer
+                        - entity_id: switch.*light*
+                          area: Esszimmer
+                        - entity_id: switch.dreame*
+                          area: Esszimmer
+                        - entity_id: switch.*echo*
+                          area: Esszimmer
+                        - entity_id: switch.*internet*
+                          area: Esszimmer
+                        - entity_id: switch.*kinder*
+                          area: Esszimmer
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Esszimmer
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Esszimmer
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Esszimmer
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Esszimmer
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Esszimmer
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Esszimmer
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Flur"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:shoe-print"></ha-icon>
+                    Flur
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Flur
+                    - entity_id: lights.*
+                      area: Flur
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Flur
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Flur
+                        - entity_id: switch.*light*
+                          area: Flur
+                        - entity_id: switch.dreame*
+                          area: Flur
+                        - entity_id: switch.*echo*
+                          area: Flur
+                        - entity_id: switch.*internet*
+                          area: Flur
+                        - entity_id: switch.*kinder*
+                          area: Flur
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Flur
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Flur
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Flur
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Flur
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Flur
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Flur
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Garten"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:sprout"></ha-icon>
+                    Garten
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: custom:auto-entities
+                card:
+                  show_name: true
+                  show_icon: true
+                  show_state: false
+                  type: glance
+                  title: Licht
+                  card_mod:
+                    style:
+                      $: |
+                        .card-header, :host ::slotted(.card-header) {
+                          font-size: 1.5em !important;
+                          font-weight: 150 !important;
+                          color: var(--primary-color) !important;
+                        }               
+                        :host(.type-glance) {
+                          background: transparent !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          border-radius: 0px !important;
+                          outline: none !important;
+                        }
+                  columns: null
+                filter:
+                  include:
+                    - entity_id: light.*
+                      area: Garten
+                    - entity_id: lights.*
+                      area: Garten
+                  exclude:
+                    - entity_id: light.*kamera*
+                show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Schalter
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: switch.*
+                          area: Garten
+                      exclude:
+                        - entity_id: switch.*licht*
+                          area: Garten
+                        - entity_id: switch.*light*
+                          area: Garten
+                        - entity_id: switch.dreame*
+                          area: Garten
+                        - entity_id: switch.*echo*
+                          area: Garten
+                        - entity_id: switch.*internet*
+                          area: Garten
+                        - entity_id: switch.*kinder*
+                          area: Garten
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Heizung
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.wandthermostat_*
+                          area: Garten
+                          state: "on"
+                        - entity_id: sensor.thermostat_*
+                          area: Garten
+                          state: "on"
+                        - entity_id: sensor.temperatur*
+                          area: Garten
+                          state: "on"
+                        - entity_id: climate.*
+                          area: Garten
+                      exclude: []
+                    sort:
+                      method: "-name"
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                    card:
+                      type: entities
+                      title: Fenster
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -10px;  
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            margin-top: -30px;                  
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.fenster_*
+                          area: Garten
+                      exclude: []
+                    sort:
+                      method: name
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                          margin-top: -40px;
+                        }
+                    card:
+                      show_name: false
+                      show_icon: true
+                      show_state: true
+                      type: glance
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border-radius: 10px !important;
+                            border-top: 0px solid var(--primary-color) !important;            
+                            border-bottom: 1px solid var(--primary-color) !important;            
+                            border-left: 0px solid var(--primary-color) !important;            
+                            border-right: 0px solid var(--primary-color) !important;            
+                            color: var(--primary-color);
+                            font-size: 10px;
+                            height: 100px !important;
+                          }
+                      columns: " "
+                    filter:
+                      include:
+                        - entity_id: binary_sensor.bewegung*
+                          area: Garten
+                          state: "on"
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Strom"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:resistor"></ha-icon>
+                    Verbraucher
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card_mod: null
+                    card:
+                      type: entities
+                      title: Gesamtverbauch
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -5px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          } 
+                          .card-content {
+                            padding: 0px !important;
+                            color: var(--primary-color);
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.total_power
+                          state: "> 0"
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Wohnzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -5px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Wohnzimmer
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Küche
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Küche
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Bad
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Bad
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Schlafzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Schlafzimmer
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Esszimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Esszimmer
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Flur
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*leistung*
+                          state: "> 0"
+                          area: Garten
+                      exclude:
+                        - entity_id: sensor.*total*
+                    sort:
+                      method: area
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Solar"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:solar-power-variant"></ha-icon>
+                    Solar
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: horizontal-stack
+                cards:
+                  - type: energy-solar-consumed-gauge
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                        ha-card div.name {
+                          visibility: hidden; 
+                          position: relative; 
+                        }
+                        ha-card div.name::before {
+                          content: "PV Verbrauch"; 
+                          visibility: visible; 
+                          position: absolute;
+                          top: 50%; 
+                          left: 50%; 
+                          transform: translate(-50%, -50%);
+                          font-size: 12px !important;
+                          color: var(--primary-color) !important;
+                          white-space: nowrap; 
+                          text-align: center; 
+                        }
+                        ha-svg-icon {
+                          visibility: hidden; 
+                        }
+                  - type: energy-grid-neutrality-gauge
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                        ha-card div.name {
+                          visibility: hidden; 
+                          position: relative; 
+                        }
+                        ha-card div.name::before {
+                          content: "Netzbezug"; 
+                          visibility: visible; 
+                          position: absolute;
+                          top: 50%; 
+                          left: 50%; 
+                          transform: translate(-50%, -50%);
+                          font-size: 12px !important;
+                          color: var(--primary-color) !important;
+                          white-space: nowrap; 
+                          text-align: center; 
+                        }
+                        ha-svg-icon {
+                          visibility: hidden; 
+                        }
+                  - type: energy-self-sufficiency-gauge
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+                        ha-card div.name {
+                          visibility: hidden; 
+                          position: relative; 
+                        }
+                        ha-card div.name::before {
+                          content: "Unabhänigkeit"; 
+                          visibility: visible; 
+                          position: absolute;
+                          top: 50%; 
+                          left: 50%; 
+                          transform: translate(-50%, -50%);
+                          font-size: 12px !important;
+                          color: var(--primary-color) !important;
+                          white-space: nowrap; 
+                          text-align: center; 
+                        }
+                        ha-svg-icon {
+                          visibility: hidden; 
+                        }
+              - type: energy-distribution
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      margin-top: -15px;
+                    }
+              - type: markdown
+                content: |
+                  <div style="height: 1px;"></div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      height: 20px !important;
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-top: 1px solid var(--secondary-text-color) !important;
+                      border-radius: 0px !important;
+                      margin-left: 15px;
+                      margin-right: 15px;
+                    }  
+              - type: energy-solar-graph
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      margin-top: -15px;
+                    }
+              - type: energy-date-selection
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                    }
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#History"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:history"></ha-icon>
+                    History
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: horizontal-stack
+                cards:
+                  - type: energy-date-selection
+                    card_mod:
+                      style: |
+                        ha-card {
+                          background: none !important;
+                          box-shadow: none !important;
+                          border: none !important;
+                        }
+              - type: energy-usage-graph
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      margin-top: -15px;
+                    }
+              - type: markdown
+                content: |
+                  <div style="height: 1px;"></div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      height: 20px !important;
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-top: 1px solid var(--secondary-text-color) !important;
+                      border-radius: 0px !important;
+                      margin-left: 15px;
+                      margin-right: 15px;
+                    }  
+              - type: energy-devices-graph
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      margin-top: -15px;
+                    }
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Batterie"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:battery-30"></ha-icon>
+                    Battrie
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Wohnzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -5px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Wohnzimmer
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Wohnzimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Küche
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Küche
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Küche
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Bad
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Bad
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Bad
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Schlafzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Schlafzimmer
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Schlafzimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Esszimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Esszimmer
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Esszimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Flur
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Flur
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: sensor.*batterie*
+                          state: < 35
+                          area: Garten
+                        - entity_id: sensor.*battery*
+                          state: < 35
+                          area: Garten
+                    sort:
+                      method: area
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Lufter"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:fan"></ha-icon>
+                    Luftreiniger
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Wohnzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -5px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Wohnzimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Küche
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Küche
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Bad
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Bad
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Schlafzimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Schlafzimmer
+                    sort:
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Esszimmer
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Esszimmer
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Flur
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Flur
+                      method: area
+                    show_empty: false
+              - type: entities
+                card_mod:
+                  style: |
+                    ha-card {
+                      border: none !important;
+                    }
+                state_color: true
+                entities:
+                  - type: custom:auto-entities
+                    card:
+                      type: entities
+                      title: Garten
+                      card_mod:
+                        style: |
+                          ha-card {
+                            background: none !important;
+                            box-shadow: none !important;
+                            border: none !important;
+                            border-radius: 0px !important;
+                            margin-top: -20px; 
+                          }
+                          #states > * {
+                            margin: 0px !important; 
+                          }
+                          .card-header {
+                            font-size: 1.5em; 
+                            font-weight: 150;
+                            color: var(--primary-color);
+                            padding: 0px !important;
+                          }
+                          .card-content {
+                            padding: 0px !important;
+                          }
+                      show_header_toggle: false
+                      state_color: true
+                    filter:
+                      include:
+                        - entity_id: fan.*
+                          area: Garten
+                      method: area
+                    show_empty: false
+      - type: vertical-stack
+        cards:
+          - type: custom:bubble-card
+            card_type: pop-up
+            hash: "#Einstellungen"
+            show_header: false
+            bg_color: var(--primary-background-color)
+            shadow_opacity: 0
+          - type: custom:stack-in-card
+            card_mod:
+              style: |
+                ha-card {
+                  background: none !important;
+                  box-shadow: none !important;
+                  border: none !important;
+                  padding: 0px; /* Etwas Padding hinzugefügt */
+                }
+            cards:
+              - type: markdown
+                content: |
+                  <div><ha-icon icon="mdi:fan"></ha-icon>
+                    Einstellungen
+                  </div>
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-bottom: 1px solid !important;
+                      border-radius: 10px !important;
+                      margin-left: 10px;
+                      margin-right: 10px;
+                      display: flex !important;
+                      align-items: center !important;
+                      justify-content: center !important;
+                      text-align: center !important;
+                      font-size: 1.8em; 
+                      font-weight: 200;
+                      color: var(--primary-color);
+                    }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:devices
+                state_color: true
+                name: Geräte & Dienste
+                tap_action:
+                  action: navigate
+                  navigation_path: /config/integrations/dashboard
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;              
+                      border-radius: 0px !important;
+                      font-size: 16px !important; 
+                      color: var(--primary-color);
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                      width: 45px !important;
+                    }
+              - type: button
+                icon: mdi:robot
+                state_color: true
+                name: Automatisierungen
+                tap_action:
+                  action: navigate
+                  navigation_path: /config/automation/dashboard
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                      font-size: 16px !important; 
+                      color: var(--primary-color);
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                      width: 45px !important;
+                    }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:sofa
+                state_color: true
+                name: Bereiche
+                tap_action:
+                  action: navigate
+                  navigation_path: /config/areas/dashboard
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                      font-size: 16px !important; 
+                      color: var(--primary-color);
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                      width: 45px !important;
+                    }
+              - type: button
+                icon: mdi:hammer
+                state_color: true
+                name: Entwickler-Tools
+                tap_action:
+                  action: navigate
+                  navigation_path: /developer-tools/yaml
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                      font-size: 16px !important; 
+                      color: var(--primary-color);
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                      width: 45px !important;
+                    }
+          - type: horizontal-stack
+            cards:
+              - type: button
+                icon: mdi:menu
+                state_color: true
+                name: HA Header ausblenden
+                tap_action:
+                  action: perform-action
+                  perform_action: input_boolean.toggle
+                  target:
+                    entity_id: input_boolean.kioskmode
+                card_mod:
+                  style: |
+                    ha-card {
+                      background: none !important;
+                      box-shadow: none !important;
+                      border: none !important;
+                      border-radius: 0px !important;
+                      font-size: 16px !important; 
+                      color: var(--primary-color);
+                    }
+                    ha-state-icon {
+                      color: var(--primary-text-color) !important;
+                      width: 45px !important;
+                    }
+type: sections
+max_columns: 1
+cards: []
