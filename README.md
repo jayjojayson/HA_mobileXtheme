@@ -6,17 +6,18 @@ Die Startseite kann nach belieben gestaltet werden. Alle anderen Raum- und Unter
 
 ## :interrobang: Wie funktioniert das
 Wenn euer Smarhome in Bereiche und darin enthaltene Geräte aufgeteilt ist, was eigentlich jeder machen sollte, dann könnt ihr das Dahsboard nutzen. Wichtig ist Aufteilung in Bereiche und diese sollten wie folgt lauten:
-Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten. Habt ihr andere Bereiche schaut euch den Abschnitt Raum enditiern an. Habt ihr nicht die gleichen Raumnamen, müssten diese unter Bereiche in Home Assistant angepasst werden.
+Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten. Habt ihr andere Bereiche schaut euch den Abschnitt Raum editieren an. Habt ihr nicht die gleichen Raumnamen, müssten diese unter Bereiche in Home Assistant angepasst werden.
 
 ## :memo: Seitenaufbau
 Die Startseite enthält oben und unten ein festes Menü. Im unteren Menü sind alle Räume aufgeführt. Aktuell sind das Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten und Einstellungen. Es wird also eine 3-Raumwohnung mit Garten dargestellt.
 Die Räume können aber auch einfach ediert werden. Wie das geht findet ihr weiter unten in den Erklärungen. Im oberen Menü findet ihr die Unterseiten Verbraucher, Solar, History, Batterie und Luftreiniger.
 Auf Startseite habe ich zwei Menüs für den Header hinterlegt. Wählt das gewünschte aus und löscht das andere. Es werden nicht alle einen Luftreiniger nutzen, daher ist das zweite Menü an dieser Stelle mit den Einstellungen verknüpft. Wichtig das Menü muss immer an erster Stelle stehen.
+Die Startseite kann weiterhin per Drag and Drop gestaltet werden.
 
 ## 📖 Features
 
 - #### 📣 Topmenü verstecken über Button (optional)
-- #### ⭐ Hauptseiten für alle Räume (Wohzimmer, Küche, Bad, Schlafzimmer, Esszimmer, Flur, Garten und Einstellungen)
+- #### ⭐ Hauptseiten für alle Räume (Wohzi., Küche, Bad, Schlafzi., Esszi., Flur, Garten und Einstellungen)
 - #### ⚡ Unterseiten für Einstellungen, Verbraucher, Solar, 📈 History, Batterie und Luftreiniger
 - #### ⭐ Unterseite Einstellungen mit Button um Topheader von HomeAssistant auszublenden
 - #### ⭐ Unterseite Einstellungen mit Verknüpfungen zu euren Geräten, Automatisierungen, Bereichen und Entwickler-Tools
@@ -47,11 +48,16 @@ Ich habe bewusst auf wenig zusätzliche Installationen geachtet, es soll ein ein
 Es sind keine Sensoren aktuell notwendig.
 
 ## 📥 Installation
+
+#### manuelle Installation
 1. Wähle den YAML-Code aus einer Vorlage und kopiere den Code.
 2. Gehe zu deinem Dashboard und füge den kopierten Code direkt in eine neue Seite ein.
 4. Schaue das Ergebnis an.
 
-5. Gestaltete Startseite nach deinen Wünschen.
+6. Gestaltete Startseite nach deinen Wünschen.
+
+#### Installation über HACS
+- Gehe zu Hacs und füge das Respotory dort ein. Dazu oben rechts auf die drei Punkte klicken und importieren auswählen. Nach dem Import könnt ihr über HACS das Dashboard installieren und erhaltet so auch updates.
 
 ## 💬 Topmenü Hack
 
