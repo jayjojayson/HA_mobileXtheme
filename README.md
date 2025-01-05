@@ -49,38 +49,54 @@ Es sind keine Sensoren aktuell notwendig.
 
 ## 📥 Installation
 
-#### manuelle Installation
-1. Wähle den YAML-Code aus einer Vorlage und kopiere den Code.
-2. Gehe zu deinem Dashboard und füge den kopierten Code direkt in eine neue Seite ein.
-4. Schaue das Ergebnis an.
-
-6. Gestaltete Startseite nach deinen Wünschen.
+## Installation über HACS
 
 #### Installation über HACS
-- Gehe zu Hacs und füge das Respotory dort ein. Dazu oben rechts auf die drei Punkte klicken und importieren auswählen. Nach dem Import könnt ihr über HACS das Dashboard installieren und erhaltet so auch updates.
+- Gehe zu Hacs und füge das Respository dort ein. Dazu oben rechts auf die drei Punkte klicken, importieren auswählen und den Link von hier dort einfügen. Nach dem Import könnt ihr über HACS das Dashboard installieren und erhaltet so auch Updates.
 
-## 💬 Topmenü Hack
-
-Um das Topmenü auf Tablet und Handy auszublenden nutze ich den Kiosk Mode von HACS.
-Einfach über HACS installieren und im Anschluss folgenden Code im Raw-Konfigurationseditor an erster Stelle einfügen.
-Erreichbar ist der Editor über die drei Punkte oben rechts, wenn man im Bearbeitungsmodus für das Dashboard ist.
-
-Zusätzlich müsst ihr unter Geräte & Dienste einen Helfer mit dem Typ Schalter und Namen kioskmode angelegen. Somit könnt ihr bequem per Schalter das Topmenü ein- oder ausblenden. Ich habe den Schalter in der Unterseite Einstellungen hinterlegt.
-
+Link für HACS
 ```bash
-kiosk_mode:
-  non_admin_settings:
-    hide_header: true
-    hide_menubutton: true
-    ignore_entity_settings: true
-  entity_settings:
-    - entity:
-        input_boolean.kioskmode: 'on'
-      hide_header: true
-    - entity:
-        input_boolean.kioskmode: 'off'
-      hide_header: false
+https://github.com/jayjojayson/ha_mobileXtheme
 ```
+
+#### Manuelle Installation
+- Ihr könnt die yaml aus dem Hauptverzeichnis manuell kopieren, geht dazu unter Einstellungen in HAS und erstellt ein neues Dashboard.
+- Im Anschluss öffnet ihr das Dashboard im Bearbeitungsmodus und klickt oben rechts auf die drei Punkte und öffnet den Raw-Konfigurationseditor.
+- Dort könnt ihr jetzt den kopierten Code aus der yaml einfügen und das Dashboard sollte vollständig erscheinen.
+- gestaltete die Startseite nach deinen Wünschen.
+
+<details>
+  <summary> 💬 - <b>Topmenü Hack</b> ---</summary>
+  
+  Um das Topmenü auf Tablet und Handy auszublenden nutze ich den Kiosk Mode von HACS.
+  Einfach über HACS installieren und im Anschluss folgenden Code im Raw-Konfigurationseditor an erster Stelle einfügen.
+  Erreichbar ist der Editor über die drei Punkte oben rechts, wenn man im Bearbeitungsmodus für das Dashboard ist.
+  
+  ```bash
+    kiosk_mode:
+      mobile_settings:
+        hide_header: true
+        ignore_entity_settings: true
+        custom_width: 1280
+  ```
+  Es geht auch noch besser, wenn ihr unter Geräte & Dienste einen Helfer mit dem Typ Schalter und Namen kioskmode angelegt könnt ihr den 
+  nachfolgenden Code wie folgt einfügen. Somit könnt ihr bequem per Schalter das Topmenü ein- oder ausblenden. Ich habe den Schalter in der Unterseite Einstellungen hinterlegt.
+  
+  ```bash
+  kiosk_mode:
+    non_admin_settings:
+      hide_header: true
+      hide_menubutton: true
+      ignore_entity_settings: true
+    entity_settings:
+      - entity:
+          input_boolean.kioskmode: 'on'
+        hide_header: true
+      - entity:
+          input_boolean.kioskmode: 'off'
+        hide_header: false
+  ```
+</details>
 
 ## 👩‍💻 Sourcecode Yaml
 
