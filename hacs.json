@@ -1,7 +1,7 @@
 {
   "name": "HA_mobileXtheme",
   "zip_release": true,
-  "filename": "v.1.0.7.zip",
+  "filename": "ha_mobileXtheme-v.1.0.8.zip",
   "render_readme": true,
   "domains": ["lovelace"],
   "homeassistant": "2024.12.0",
