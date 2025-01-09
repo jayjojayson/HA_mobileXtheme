@@ -1,9 +1,0 @@
-{
-  "name": "HA_mobileXtheme",
-  "zip_release": true,
-  "filename": "ha_mobileXtheme-v.1.0.8.zip",
-  "render_readme": true,
-  "domains": ["lovelace"],
-  "homeassistant": "2024.12.0",
-  "iot_class": "local_push"
-}
