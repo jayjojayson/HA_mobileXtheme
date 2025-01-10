@@ -28,6 +28,8 @@ Die Startseite kann weiterhin per Drag and Drop gestaltet werden.
 
 #### Hauptseiten
 
+![start7](https://github.com/user-attachments/assets/b8e3b0e3-bb93-4cb0-b367-86bb14109b6e)
+
 #### Unterseiten
 
 
