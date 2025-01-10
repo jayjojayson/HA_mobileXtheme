@@ -27,7 +27,7 @@ sections:
                 state_color: true
                 tap_action:
                   action: navigate
-                  navigation_path: "#Strom"
+                  navigation_path: "#TeststattStrom"
                 card_mod:
                   style: |
                     ha-card {
