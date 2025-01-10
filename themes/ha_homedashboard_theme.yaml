@@ -1,3 +1,8 @@
+---
+#
+# ha_homedashboard_theme
+#
+
 grey-icon:
   state-icon-color: grey
   card-background-color: "rgba(22, 22, 22, 0.3)"    #cardmod 3.4.4
